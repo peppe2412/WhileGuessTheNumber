@@ -15,10 +15,16 @@ int numberToBeGuess = 25;
 // numero inserito
 int addNumber = 0;
 
+// Conteggio dei tentativi
+int counter = 0;
+
 
 
 while(addNumber != numberToBeGuess)
 {
+    // Numero di tentativi
+    counter++;
+
     Console.WriteLine("Indovina il numero");
 
     // Input
@@ -39,6 +45,14 @@ while(addNumber != numberToBeGuess)
     // Numero indovinato
     else
     {
-        Console.WriteLine($"Hai indovinato!{emojiForWin}");
+        if(counter == 1)
+        {
+            Console.WriteLine($"Hai indovinato! Al primo colpo{emojiForWin}");
+        }
+        else
+        {
+            Console.WriteLine($"Hai indovinato!{emojiForWin}\nCi sono voluti {counter} tentativi");
+        }
+            
     }
 }
