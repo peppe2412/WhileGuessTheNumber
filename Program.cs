@@ -3,14 +3,17 @@
  * Si userà il ciclo while
  */
 
+// Generare numeri pseudo-casuali
+Random random = new Random();
+
 // Convertire output in utf-8
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 //Emoji in caso di numero indovinato
 string emojiForWin = char.ConvertFromUtf32(0x0001F389);
 
-// Numero da indovinare
-int numberToBeGuess = 25;
+// Numeri da indovinare
+int numberToBeGuess = random.Next(1, 51);
 
 // numero inserito
 int addNumber = 0;
